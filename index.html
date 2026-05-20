@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light" data-font-size="medium">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TecnoRed – Inclusión digital para zonas rurales e Iberoamérica. Aprende tecnología con tutoriales simples y accesibles." />
+  <title>TecnoRed – Inclusión Digital Iberoamericana</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,800;1,9..144,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     ACCESSIBILITY TOOLBAR
+═══════════════════════════════════════════ -->
+<div class="a11y-bar" role="toolbar" aria-label="Herramientas de accesibilidad">
+  <button class="a11y-btn" id="btn-tts" title="Lectura en voz alta" aria-pressed="false">
+    <span class="a11y-icon">🔊</span>
+    <span class="a11y-label">Voz</span>
+  </button>
+  <button class="a11y-btn" id="btn-font-dec" title="Reducir texto" aria-label="Reducir tamaño de texto">
+    <span class="a11y-icon">A-</span>
+  </button>
+  <button class="a11y-btn" id="btn-font-inc" title="Aumentar texto" aria-label="Aumentar tamaño de texto">
+    <span class="a11y-icon">A+</span>
+  </button>
+  <button class="a11y-btn" id="btn-theme" title="Modo oscuro/claro" aria-pressed="false">
+    <span class="a11y-icon" id="theme-icon">🌙</span>
+    <span class="a11y-label">Modo</span>
+  </button>
+  <button class="a11y-btn" id="btn-contrast" title="Alto contraste" aria-pressed="false">
+    <span class="a11y-icon">◑</span>
+    <span class="a11y-label">Contraste</span>
+  </button>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════════ -->
+<header class="site-header" role="banner">
+  <nav class="nav-main" aria-label="Navegación principal">
+    <a href="#" class="nav-logo" data-page="inicio" aria-label="TecnoRed inicio">
+      <span class="logo-mark">T</span>
+      <span class="logo-text">TecnoRed</span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-menu" id="nav-menu" role="list">
+      <li><a class="nav-link active" data-page="inicio" href="#inicio">Inicio</a></li>
+      <li><a class="nav-link" data-page="proyecto" href="#proyecto">Proyecto</a></li>
+      <li><a class="nav-link" data-page="plataforma" href="#plataforma">Aprende</a></li>
+      <li><a class="nav-link" data-page="rural" href="#rural">Zona Rural</a></li>
+      <li><a class="nav-link" data-page="concurso" href="#concurso">Concurso</a></li>
+      <li><a class="nav-link" data-page="equipo" href="#equipo">Equipo</a></li>
+      <li><a class="nav-link" data-page="impacto" href="#impacto">Impacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ═══════════════════════════════════════════
+     MAIN CONTENT — SPA PAGES
+═══════════════════════════════════════════ -->
+<main id="main-content" role="main">
+
+  <!-- ── PAGE: INICIO ─────────────────────── -->
+  <section class="page active" id="page-inicio" aria-label="Página de inicio">
+    <div class="hero">
+      <div class="hero-bg">
+        <div class="hero-orb orb-1"></div>
+        <div class="hero-orb orb-2"></div>
+        <div class="hero-orb orb-3"></div>
+        <div class="hero-grid"></div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span>🌎 Proyecto INFOMATRIX · SOLACYT · IBEROCIENCIAS</span>
+        </div>
+        <h1 class="hero-title">
+          <span class="title-line">La tecnología</span>
+          <em class="title-em">para todos,</em>
+          <span class="title-line">sin excepción.</span>
+        </h1>
+        <p class="hero-desc">
+          TecnoRed es una plataforma de inclusión digital diseñada para personas de zonas rurales y con baja alfabetización digital. Creemos que el conocimiento tecnológico es un derecho, no un privilegio.
+        </p>
+        <div class="hero-cta">
+          <button class="btn-primary" data-page="plataforma">Comenzar a aprender →</button>
+          <button class="btn-ghost" data-page="proyecto">Ver el proyecto</button>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-num">+250M</span>
+            <span class="stat-label">personas sin acceso digital en Latinoamérica</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">7</span>
+            <span class="stat-label">módulos interactivos gratuitos</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">accesible desde tu celular</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="phone-mockup">
+          <div class="phone-screen">
+            <div class="phone-app">
+              <div class="app-icon">📱</div>
+              <div class="app-text">Aprende a usar<br/>tu celular</div>
+              <div class="app-progress">
+                <div class="progress-bar" style="width:60%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="float-card card-1">✅ Paso 1 completo</div>
+        <div class="float-card card-2">🎯 ¡Muy bien!</div>
+      </div>
+    </div>
+
+    <!-- PROBLEMA SOCIAL -->
+    <section class="section-problem" aria-labelledby="problem-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">El problema que resolvemos</span>
+          <h2 id="problem-title" class="section-title">La brecha digital<br/>es una crisis silenciosa</h2>
+        </div>
+        <div class="problem-grid">
+          <div class="problem-card" tabindex="0">
+            <div class="pc-icon">🌾</div>
+            <h3>Zonas rurales aisladas</h3>
+            <p>Millones de familias en comunidades rurales de Iberoamérica nunca han tocado una computadora ni navegado por Internet.</p>
+          </div>
+          <div class="problem-card" tabindex="0">
+            <div class="pc-icon">📵</div>
+            <h3>Exclusión educativa digital</h3>
+            <p>Sin conocimientos básicos de tecnología, las personas pierden acceso a empleos, servicios de salud y educación en línea.</p>
+          </div>
+          <div class="problem-card" tabindex="0">
+            <div class="pc-icon">⚠️</div>
+            <h3>Vulnerabilidad ante estafas</h3>
+            <p>La falta de educación digital expone a las personas a fraudes, desinformación y robo de identidad en línea.</p>
+          </div>
+          <div class="problem-card" tabindex="0">
+            <div class="pc-icon">📉</div>
+            <h3>Desigualdad económica</h3>
+            <p>La brecha digital profundiza la desigualdad social y económica, dejando atrás a quienes más apoyo necesitan.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OBJETIVO -->
+    <section class="section-goal" aria-labelledby="goal-title">
+      <div class="container">
+        <div class="goal-inner">
+          <div class="goal-text">
+            <span class="section-tag">Nuestra misión</span>
+            <h2 id="goal-title">Empoderar a las personas<br/>con conocimiento digital</h2>
+            <p>TecnoRed ofrece tutoriales simples, visuales e interactivos en español, diseñados específicamente para quienes se acercan a la tecnología por primera vez. Sin tecnicismos, sin barreras.</p>
+            <ul class="goal-list">
+              <li>✅ Tutoriales paso a paso en lenguaje sencillo</li>
+              <li>✅ Lectura en voz alta para personas con dificultad de lectura</li>
+              <li>✅ Diseño optimizado para celulares de gama baja</li>
+              <li>✅ Completamente gratuito y sin registro</li>
+            </ul>
+            <button class="btn-primary" data-page="plataforma">Explorar módulos →</button>
+          </div>
+          <div class="goal-visual" aria-hidden="true">
+            <div class="goal-circles">
+              <div class="gc gc-outer"><span>Sociedad</span></div>
+              <div class="gc gc-mid"><span>Educación</span></div>
+              <div class="gc gc-inner"><span>TecnoRed</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENSAJE MOTIVADOR -->
+    <section class="section-motivator" aria-labelledby="motivator-title">
+      <div class="container">
+        <blockquote class="motivator-quote" id="motivator-title">
+          <p>"No necesitas saber todo sobre tecnología. Solo necesitas dar el primer paso. Nosotros te acompañamos en cada uno."</p>
+          <cite>— Equipo TecnoRed</cite>
+        </blockquote>
+        <button class="btn-large" data-page="rural">
+          🌾 Entrar a la Zona Rural Simplificada
+        </button>
+      </div>
+    </section>
+  </section>
+
+  <!-- ── PAGE: PROYECTO ─────────────────────── -->
+  <section class="page" id="page-proyecto" aria-label="Proyecto científico">
+    <div class="container">
+      <div class="page-header">
+        <span class="section-tag">Proyecto en continuación</span>
+        <h1>TecnoRed: Ciencia, Tecnología<br/>e Impacto Social</h1>
+        <p class="page-subtitle">Un proyecto científico-tecnológico orientado a resolver la brecha digital en Iberoamérica mediante innovación educativa accesible.</p>
+      </div>
+
+      <div class="project-pillars">
+        <div class="pillar-card" style="--accent:#4CAF82">
+          <div class="pillar-num">01</div>
+          <h3>Enfoque Científico</h3>
+          <p>Basado en investigaciones sobre analfabetismo digital, pedagogía inclusiva y tecnologías adaptativas. Aplicamos metodología UX centrada en el usuario con poblaciones vulnerables, siguiendo principios de diseño universal y accesibilidad WCAG.</p>
+        </div>
+        <div class="pillar-card" style="--accent:#F5A623">
+          <div class="pillar-num">02</div>
+          <h3>Enfoque Tecnológico</h3>
+          <p>Desarrollo web con HTML5 semántico, CSS3, JavaScript Vanilla y Web APIs modernas (SpeechSynthesis, LocalStorage). Arquitectura SPA liviana, optimizada para conexiones lentas y dispositivos de bajo rendimiento.</p>
+        </div>
+        <div class="pillar-card" style="--accent:#E74C6B">
+          <div class="pillar-num">03</div>
+          <h3>Impacto Social</h3>
+          <p>Dirigido a más de 250 millones de personas en Iberoamérica sin alfabetización digital. Potencial de reducir la brecha tecnológica en comunidades rurales, adultos mayores y poblaciones con bajo nivel educativo formal.</p>
+        </div>
+        <div class="pillar-card" style="--accent:#9B59B6">
+          <div class="pillar-num">04</div>
+          <h3>Innovación Propuesta</h3>
+          <p>Primera plataforma iberoamericana 100% en español con lectura en voz alta integrada, zona rural simplificada, tutoriales visuales por pasos y modo de navegación guiada sin necesidad de conocimientos previos.</p>
+        </div>
+        <div class="pillar-card" style="--accent:#3498DB">
+          <div class="pillar-num">05</div>
+          <h3>Creatividad Aplicada</h3>
+          <p>Sistema gamificado de progreso con recompensas visuales. Simulaciones interactivas de interfaces reales. Lenguaje inclusivo y culturalmente adaptado para distintas regiones latinoamericanas.</p>
+        </div>
+        <div class="pillar-card" style="--accent:#1ABC9C">
+          <div class="pillar-num">06</div>
+          <h3>Aporte al Mundo</h3>
+          <p>Contribuye directamente al ODS 4 (Educación de Calidad) y ODS 10 (Reducción de Desigualdades) de la ONU. Modelo replicable para otros países en desarrollo con alta brecha digital.</p>
+        </div>
+      </div>
+
+      <!-- CONTINUACIÓN DEL PROYECTO -->
+      <div class="continuation-badge">
+        <div class="cb-icon">🔄</div>
+        <div class="cb-text">
+          <strong>Proyecto en Continuación</strong>
+          <p>TecnoRed es una evolución de investigaciones previas sobre inclusión digital en comunidades rurales bolivianas. Esta edición incorpora nuevos módulos interactivos, lectura en voz alta y una zona rural rediseñada.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PAGE: PLATAFORMA (APRENDE) ──────────── -->
+  <section class="page" id="page-plataforma" aria-label="Plataforma de aprendizaje">
+    <div class="container">
+      <div class="page-header">
+        <span class="section-tag">Centro de aprendizaje</span>
+        <h1>¿Qué quieres aprender hoy?</h1>
+        <p class="page-subtitle">Elige un módulo y aprende a tu ritmo, sin prisa y sin tecnicismos.</p>
+      </div>
+
+      <div class="modules-grid" id="modules-grid" role="list" aria-label="Módulos de aprendizaje">
+        <!-- Módulos generados por JS -->
+      </div>
+
+      <!-- MODAL MÓDULO -->
+      <div class="module-modal" id="module-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+        <div class="modal-overlay" id="modal-overlay"></div>
+        <div class="modal-box">
+          <button class="modal-close" id="modal-close" aria-label="Cerrar módulo">✕</button>
+          <div class="modal-header">
+            <span class="modal-icon" id="modal-icon"></span>
+            <h2 id="modal-title"></h2>
+          </div>
+          <div class="modal-progress">
+            <div class="mp-bar">
+              <div class="mp-fill" id="mp-fill"></div>
+            </div>
+            <span class="mp-text" id="mp-text">Paso 1 de 4</span>
+          </div>
+          <div class="modal-content" id="modal-content"></div>
+          <div class="modal-nav">
+            <button class="btn-ghost" id="btn-prev-step">← Anterior</button>
+            <button class="btn-primary" id="btn-next-step">Siguiente →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PAGE: ZONA RURAL ───────────────────── -->
+  <section class="page" id="page-rural" aria-label="Zona rural simplificada">
+    <div class="rural-hero">
+      <div class="container">
+        <div class="rh-badge">🌾 Zona Rural Simplificada</div>
+        <h1 class="rh-title">Bienvenido/a<br/>¿En qué te ayudo?</h1>
+        <p class="rh-sub">Toca los botones grandes para aprender. Sin complicaciones.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="rural-grid" role="list" aria-label="Opciones de aprendizaje rural">
+        <button class="rural-card" data-rural="celular" role="listitem" tabindex="0">
+          <span class="rc-icon">📱</span>
+          <span class="rc-label">Usar mi celular</span>
+        </button>
+        <button class="rural-card" data-rural="internet" role="listitem" tabindex="0">
+          <span class="rc-icon">🌐</span>
+          <span class="rc-label">Usar Internet</span>
+        </button>
+        <button class="rural-card" data-rural="correo" role="listitem" tabindex="0">
+          <span class="rc-icon">✉️</span>
+          <span class="rc-label">Crear un correo</span>
+        </button>
+        <button class="rural-card" data-rural="seguridad" role="listitem" tabindex="0">
+          <span class="rc-icon">🛡️</span>
+          <span class="rc-label">No ser estafado</span>
+        </button>
+        <button class="rural-card" data-rural="apps" role="listitem" tabindex="0">
+          <span class="rc-icon">📲</span>
+          <span class="rc-label">Usar aplicaciones</span>
+        </button>
+        <button class="rural-card" data-rural="videollamada" role="listitem" tabindex="0">
+          <span class="rc-icon">📹</span>
+          <span class="rc-label">Videollamadas</span>
+        </button>
+      </div>
+
+      <!-- PANEL RURAL TUTORIAL -->
+      <div class="rural-tutorial" id="rural-tutorial" hidden aria-live="polite">
+        <button class="rtu-back" id="rtu-back">← Volver</button>
+        <div class="rtu-content" id="rtu-content"></div>
+        <div class="rtu-nav">
+          <button class="btn-rural-nav" id="rtu-prev">⬅ Anterior</button>
+          <span class="rtu-counter" id="rtu-counter">1 / 1</span>
+          <button class="btn-rural-nav" id="rtu-next">Siguiente ➡</button>
+        </div>
+        <button class="btn-tts-rural" id="btn-tts-rural">
+          🔊 Escuchar este paso
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PAGE: CONCURSO ─────────────────────── -->
+  <section class="page" id="page-concurso" aria-label="Información del concurso">
+    <div class="container">
+      <div class="page-header">
+        <span class="section-tag">Concurso Iberoamericano</span>
+        <h1>Participación en<br/>INFOMATRIX / SOLACYT</h1>
+        <p class="page-subtitle">Información oficial sobre el Concurso Iberoamericano de Proyectos Estudiantiles en Ciencia y Tecnología.</p>
+      </div>
+
+      <div class="concurso-logos" aria-label="Organizadores del concurso">
+        <div class="org-badge">
+          <span class="org-icon">🏛️</span>
+          <div>
+            <strong>SOLACYT</strong>
+            <p>Sociedad Latinoamericana de Ciencia y Tecnología Aplicada A.C.</p>
+          </div>
+        </div>
+        <div class="org-badge">
+          <span class="org-icon">🌍</span>
+          <div>
+            <strong>IBEROCIENCIAS</strong>
+            <p>Organización Iberoamericana de Ciencias</p>
+          </div>
+        </div>
+        <div class="org-badge">
+          <span class="org-icon">💻</span>
+          <div>
+            <strong>INFOMATRIX</strong>
+            <p>Portal oficial de gestión del concurso</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="requisitos-grid">
+        <div class="req-card">
+          <div class="req-icon">🎂</div>
+          <h3>Edades permitidas</h3>
+          <p>Estudiantes de nivel básico, medio y superior. Edades según categorías del concurso oficial publicadas en INFOMATRIX.</p>
+        </div>
+        <div class="req-card">
+          <div class="req-icon">👥</div>
+          <h3>Equipos</h3>
+          <p>Máximo <strong>3 estudiantes</strong> por equipo. Trabajo colaborativo y participación activa de todos los integrantes.</p>
+        </div>
+        <div class="req-card">
+          <div class="req-icon">👨‍🏫</div>
+          <h3>Asesor obligatorio</h3>
+          <p>Cada equipo debe contar con un docente o tutor asesor que oriente y valide el proyecto presentado.</p>
+        </div>
+        <div class="req-card">
+          <div class="req-icon">⚖️</div>
+          <h3>Decisiones del jurado</h3>
+          <p>Los participantes aceptan que las decisiones del jurado son definitivas e inapelables, de acuerdo con los reglamentos oficiales.</p>
+        </div>
+        <div class="req-card">
+          <div class="req-icon">©️</div>
+          <h3>Derechos de autor</h3>
+          <p>El proyecto es propiedad intelectual de los autores. SOLACYT e IBEROCIENCIAS pueden difundirlo con fines educativos y académicos sin fines de lucro.</p>
+        </div>
+        <div class="req-card">
+          <div class="req-icon">📚</div>
+          <h3>Bibliografía requerida</h3>
+          <p>Todo proyecto debe incluir fuentes de investigación, créditos y referencias bibliográficas en formato académico reconocido.</p>
+        </div>
+      </div>
+
+      <!-- BIBLIOGRAFÍA -->
+      <div class="bibliography" aria-labelledby="biblio-title">
+        <h2 id="biblio-title">Bibliografía y Créditos</h2>
+        <ul class="biblio-list">
+          <li>CEPAL (2022). <em>Perspectivas de la Sociedad de la Información en América Latina y el Caribe.</em> Naciones Unidas.</li>
+          <li>ITU (2023). <em>Measuring Digital Development: Facts and Figures.</em> International Telecommunication Union.</li>
+          <li>W3C (2023). <em>Web Content Accessibility Guidelines (WCAG) 2.1.</em> World Wide Web Consortium.</li>
+          <li>UNESCO (2022). <em>Educación para el desarrollo sostenible: hoja de ruta.</em> Organización de las Naciones Unidas para la Educación.</li>
+          <li>INFOMATRIX / SOLACYT (2024). <em>Lineamientos oficiales del Concurso Iberoamericano de Proyectos Estudiantiles.</em></li>
+          <li>MDN Web Docs (2024). <em>Web Speech API, HTML Semantics, CSS Grid/Flexbox.</em> Mozilla Foundation.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PAGE: EQUIPO ───────────────────────── -->
+  <section class="page" id="page-equipo" aria-label="Equipo del proyecto">
+    <div class="container">
+      <div class="page-header">
+        <span class="section-tag">Quiénes somos</span>
+        <h1>El Equipo TecnoRed</h1>
+        <p class="page-subtitle">Estudiantes comprometidos con cerrar la brecha digital en Iberoamérica.</p>
+      </div>
+
+      <div class="team-grid">
+        <div class="team-card lead">
+          <div class="tc-avatar" style="background:var(--accent-warm)">👩‍💻</div>
+          <div class="tc-info">
+            <h3>Estudiante 1</h3>
+            <span class="tc-role">Líder del proyecto · Desarrollo Web</span>
+            <p>Responsable de la arquitectura técnica, diseño front-end y módulos interactivos de TecnoRed.</p>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="tc-avatar" style="background:var(--accent-cool)">👨‍🔬</div>
+          <div class="tc-info">
+            <h3>Estudiante 2</h3>
+            <span class="tc-role">Investigación Científica</span>
+            <p>Encargado de la investigación sobre brecha digital, análisis de impacto social y documentación científica.</p>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="tc-avatar" style="background:var(--accent-green)">👩‍🎨</div>
+          <div class="tc-info">
+            <h3>Estudiante 3</h3>
+            <span class="tc-role">Diseño UX/UI · Contenido</span>
+            <p>Responsable del diseño de experiencia de usuario accesible, tutoriales visuales y contenido inclusivo.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ASESOR -->
+      <div class="advisor-section" aria-labelledby="advisor-title">
+        <h2 id="advisor-title">Docente Asesor</h2>
+        <div class="advisor-card">
+          <div class="ac-avatar">👨‍🏫</div>
+          <div class="ac-info">
+            <h3>Nombre del Asesor</h3>
+            <span>Docente de Informática · Institución Educativa</span>
+            <p>Guía y valida el desarrollo científico y tecnológico del proyecto, asegurando su rigor académico y pertinencia social.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- INSTITUCIÓN -->
+      <div class="institution-card" aria-labelledby="inst-title">
+        <h2 id="inst-title">Institución Educativa</h2>
+        <div class="inst-info">
+          <div class="inst-item">
+            <strong>Institución:</strong>
+            <span>Unidad Educativa / Colegio / Universidad participante</span>
+          </div>
+          <div class="inst-item">
+            <strong>Modalidad:</strong>
+            <span>Presencial / Virtual / Semipresencial</span>
+          </div>
+          <div class="inst-item">
+            <strong>País:</strong>
+            <span>Bolivia, Iberoamérica</span>
+          </div>
+          <div class="inst-item">
+            <strong>Categoría del concurso:</strong>
+            <span>Ciencias de la Computación e Informática</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PAGE: IMPACTO ──────────────────────── -->
+  <section class="page" id="page-impacto" aria-label="Impacto social">
+    <div class="container">
+      <div class="page-header">
+        <span class="section-tag">Transformación real</span>
+        <h1>Impacto Social<br/>de TecnoRed</h1>
+        <p class="page-subtitle">De la problemática detectada a la solución tecnológica con beneficios reales para la sociedad.</p>
+      </div>
+
+      <div class="impact-flow">
+        <div class="if-step">
+          <div class="ifs-num">1</div>
+          <div class="ifs-content">
+            <h3>Problema Detectado</h3>
+            <p>Más del 40% de la población rural de Latinoamérica no tiene acceso a Internet y carece de habilidades digitales básicas. Esto genera exclusión social, económica y educativa.</p>
+          </div>
+        </div>
+        <div class="if-arrow">↓</div>
+        <div class="if-step">
+          <div class="ifs-num">2</div>
+          <div class="ifs-content">
+            <h3>Población Beneficiada</h3>
+            <div class="benefit-tags">
+              <span>🌾 Comunidades rurales</span>
+              <span>👴 Adultos mayores</span>
+              <span>📚 Personas con baja escolaridad</span>
+              <span>👩 Mujeres rurales</span>
+              <span>🏔️ Pueblos indígenas</span>
+            </div>
+          </div>
+        </div>
+        <div class="if-arrow">↓</div>
+        <div class="if-step">
+          <div class="ifs-num">3</div>
+          <div class="ifs-content">
+            <h3>Solución Tecnológica</h3>
+            <p>TecnoRed: plataforma web 100% gratuita, en español, optimizada para celulares con conexión lenta, con tutoriales visuales, lectura en voz alta y zona rural simplificada.</p>
+          </div>
+        </div>
+        <div class="if-arrow">↓</div>
+        <div class="if-step accent-step">
+          <div class="ifs-num">4</div>
+          <div class="ifs-content">
+            <h3>Beneficios Sociales Esperados</h3>
+            <ul class="benefits-list">
+              <li>📈 Incremento de empleabilidad digital en comunidades rurales</li>
+              <li>🏥 Acceso a servicios de salud y gobierno en línea</li>
+              <li>🎓 Continuidad educativa a través de plataformas digitales</li>
+              <li>🔒 Reducción de fraudes y estafas digitales</li>
+              <li>👨‍👩‍👧 Fortalecimiento de vínculos familiares por videollamadas</li>
+              <li>💼 Emprendimientos locales con presencia digital</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- ODS -->
+      <div class="ods-section" aria-labelledby="ods-title">
+        <h2 id="ods-title">Objetivos de Desarrollo Sostenible (ODS-ONU)</h2>
+        <div class="ods-grid">
+          <div class="ods-card" style="--ods-color:#C5192D">
+            <strong>ODS 1</strong>
+            <span>Fin de la Pobreza</span>
+          </div>
+          <div class="ods-card" style="--ods-color:#DDA63A">
+            <strong>ODS 4</strong>
+            <span>Educación de Calidad</span>
+          </div>
+          <div class="ods-card" style="--ods-color:#FF3A21">
+            <strong>ODS 8</strong>
+            <span>Trabajo Decente</span>
+          </div>
+          <div class="ods-card" style="--ods-color:#DD1367">
+            <strong>ODS 10</strong>
+            <span>Reducción de Desigualdades</span>
+          </div>
+          <div class="ods-card" style="--ods-color:#56C02B">
+            <strong>ODS 17</strong>
+            <span>Alianzas para los Objetivos</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo-mark">T</span>
+        <div>
+          <strong>TecnoRed</strong>
+          <p>Inclusión digital para Iberoamérica</p>
+        </div>
+      </div>
+      <div class="footer-info">
+        <p>Proyecto presentado al Concurso Iberoamericano de Proyectos Estudiantiles en Ciencia y Tecnología</p>
+        <p><strong>SOLACYT · IBEROCIENCIAS · INFOMATRIX</strong></p>
+        <p>© 2024 Equipo TecnoRed. Todos los derechos reservados.</p>
+      </div>
+      <div class="footer-links">
+        <button class="footer-nav-btn" data-page="inicio">Inicio</button>
+        <button class="footer-nav-btn" data-page="proyecto">Proyecto</button>
+        <button class="footer-nav-btn" data-page="plataforma">Aprender</button>
+        <button class="footer-nav-btn" data-page="concurso">Concurso</button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- PROGRESS TOAST -->
+<div class="progress-toast" id="progress-toast" role="status" aria-live="polite" hidden>
+  🎉 <span id="toast-text">¡Módulo completado!</span>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
